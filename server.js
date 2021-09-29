@@ -24,6 +24,14 @@ app.get("/search" , (req , res)=>{
         if(name!=undefined && age!=undefined){
            return ( user.name.includes(name)&&
             user.age==age)
+        }else if(name!=undefined){
+            return (user.name.includes(name)&&user.age("Age"))
+
+        }else if(age!=undefined){
+            return (user.age(age)&&user.name.includes("User Name"))
+
+        }else if (filterdArray.length==0){
+            return (res.statusCode)
         }
     })
     res.json(filterdArray);
