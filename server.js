@@ -29,7 +29,7 @@ app.get("/users", (req, res) => {
     }
 
     if (filterdArray.length === 0) {
-        res.status(204).send('No Content -> Empty Array')
+        res.status(404).send('No Content -> Empty Array')
     } else if (filterdArray.length != 0) {
         res.status(200).json(filterdArray)
     }
