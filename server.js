@@ -17,14 +17,14 @@ app.get("/users", (req, res) => {
     res.json(arr);
 })
 
-app.get("/search", (req, res) => {
+app.get("/users", (req, res) => {
     const {name, age} = req.query;
     let filterdArray = arr;
 
     if (name) {
         filterdArray = arr.filter(user => user.name.includes(name))
     }
-    if (color) {
+    if (age) {
         filterdArray = arr.filter(user => user.age = age)
     }
 
